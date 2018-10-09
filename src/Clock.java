@@ -17,6 +17,17 @@ public class Clock {
 		//System.out.println("Hours: " + hours);
 		//System.out.println("Minutes: " + minutes);
 		
+		String durationAnswer = JOptionPane.showInputDialog(null, "duration (min)");
+		int duration = Integer.parseInt(durationAnswer);
+		 
+		int addHours = duration / 60;
+		
+		int addMin = duration % 60;
+		
+		int newHours = hours + addHours;
+		int newMin = minutes + addMin;
+		
+		JOptionPane.showMessageDialog (null, "New time is " + newHours + ":" + newMin );
 		
 		
 		
