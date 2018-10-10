@@ -22,10 +22,17 @@ public class Clock {
 		 
 		int addHours = duration / 60;
 		
+		 	
 		int addMin = duration % 60;
 		
 		int newHours = hours + addHours;
 		int newMin = minutes + addMin;
+		
+		if (newHours > 12) {
+			newHours = newHours %12;
+	 	
+		}
+	 			
 		
 		JOptionPane.showMessageDialog (null, "New time is " + newHours + ":" + newMin );
 		
